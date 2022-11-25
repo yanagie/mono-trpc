@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsc",
     "dev": "ts-node ./index.ts",
-    "clean": "rm -rf node_modules dist"
+    "clean": "rm -rf node_modules dist .turbo"
   },
   "keywords": [],
   "author": "",
