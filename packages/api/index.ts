@@ -3,6 +3,7 @@ import cors from "cors";
 import { inferAsyncReturnType, initTRPC } from "@trpc/server";
 import { z } from "zod";
 import * as trpcExpress from "@trpc/server/adapters/express";
+import { prisma } from "@mono-trpc/prisma";
 
 const createContext = ({
   req,
@@ -24,6 +25,29 @@ export const appRouter = t.router({
       return {
         greeting: input.text ? `hello ${input.text}` : "hello world",
       };
+    }),
+  getUser: t.procedure
+    .input(z.object({ userId: z.number() }))
+    .query(async ({ input }) => {
+      const user = await prisma.user.findUnique({
+        where: {
+          id: input.userId,
+        },
+      });
+      return user;
+    }),
+  createUser: t.procedure
+    .input(
+      z.object({
+        name: z.string(),
+        email: z.string().email(),
+      })
+    )
+    .mutation(async ({ input }) => {
+      const user = await prisma.user.create({
+        data: input,
+      });
+      return user;
     }),
 });
 
