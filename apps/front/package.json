@@ -1,0 +1,28 @@
+{
+  "name": "front",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "clean": "rm -rf node_modules dist"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "^4.16.1",
+    "@trpc/client": "^10.1.0",
+    "@trpc/react-query": "^10.1.0",
+    "@trpc/server": "^10.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.24",
+    "@types/react-dom": "^18.0.8",
+    "@vitejs/plugin-react": "^2.2.0",
+    "@mono-trpc/api": "*",
+    "typescript": "^4.6.4",
+    "vite": "^3.2.3"
+  }
+}
