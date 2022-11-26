@@ -6,9 +6,13 @@
       "dependsOn": ["^build"]
     },
     "dev": {
+      "dependsOn": ["@mono-trpc/prisma#build"],
       "cache": false
     },
     "clean": {
+      "cache": false
+    },
+    "start": {
       "cache": false
     }
   }

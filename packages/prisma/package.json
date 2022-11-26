@@ -2,11 +2,13 @@
   "name": "@mono-trpc/prisma",
   "version": "1.0.0",
   "description": "",
-  "main": "index.ts",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
+    "build": "pnpm exec prisma generate && tsc --declaration",
     "migrate:dev": "pnpm exec prisma migrate dev",
     "seed": "pnpm exec prisma db seed",
-    "clean": "rm -rf node_modules"
+    "clean": "rm -rf node_modules dist .turbo"
   },
   "keywords": [],
   "author": "",

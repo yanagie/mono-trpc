@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "turbo run build --parallel",
+    "build": "turbo run build",
     "dev": "turbo run dev --parallel",
+    "start": "turbo run start --parallel",
     "clean": "turbo run clean && rm -rf node_modules"
   },
   "keywords": [],
