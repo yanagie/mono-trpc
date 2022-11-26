@@ -1,7 +1,7 @@
 {
   "name": "@mono-trpc/api",
-  "version": "1.0.0",
-  "description": "",
+  "private": true,
+  "version": "0.0.0",
   "main": "index.ts",
   "scripts": {
     "build": "tsc",
@@ -9,9 +9,6 @@
     "start": "node ./dist/index.js",
     "clean": "rm -rf node_modules dist .turbo"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "@trpc/server": "^10.1.0",
     "cors": "^2.8.5",

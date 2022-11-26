@@ -1,7 +1,7 @@
 {
   "name": "@mono-trpc/prisma",
-  "version": "1.0.0",
-  "description": "",
+  "private": true,
+  "version": "0.0.0",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
@@ -10,9 +10,6 @@
     "seed": "pnpm exec prisma db seed",
     "clean": "rm -rf node_modules dist .turbo"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
     "@types/node": "^18.11.9",
     "prisma": "^4.6.1",

@@ -1,17 +1,13 @@
 {
   "name": "mono-trpc",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.0.0",
+  "license": "MIT",
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
     "start": "turbo run start --parallel",
     "clean": "turbo run clean && rm -rf node_modules"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
     "turbo": "^1.6.3"
   }
