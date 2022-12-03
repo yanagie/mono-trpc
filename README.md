@@ -8,6 +8,9 @@ This is a minimum fullstack repo inspired by `T3 Stack`.
 
 ## Getting Started
 ```sh
+# optional: If you haven't installed pnpm
+npm i -g pnpm
+# clone repo
 git clone https://github.com/yanagie/mono-trpc.git
 # install packages
 cd mono-trpc && pnpm i
