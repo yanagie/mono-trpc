@@ -14,18 +14,7 @@ type Context = inferAsyncReturnType<typeof createContext>;
 
 const t = initTRPC.context<Context>().create();
 
-export const appRouter = t.router({
-  hello: t.procedure
-    .input(
-      z.object({
-        text: z.string().nullish(),
-      })
-    )
-    .query(({ input }) => {
-      return {
-        greeting: input.text ? `hello ${input.text}` : "hello world",
-      };
-    }),
+const appRouter = t.router({
   getUser: t.procedure
     .input(z.object({ userId: z.number() }))
     .query(async ({ input }) => {
